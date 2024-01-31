@@ -22,11 +22,4 @@ public class StudentService {
     return studentRepository.save(student);
     }
 
-
-//    public Category createCategory(CategoryResponseDTO categoryResponseDTO) {
-//        Category category = new Category();
-//        category.setName(categoryResponseDTO.getName());
-//        category.setDescription(categoryResponseDTO.getDescription());
-//        return categoryRepository.save(category);
-//    }
 }

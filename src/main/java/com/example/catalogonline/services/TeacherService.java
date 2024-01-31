@@ -18,15 +18,3 @@ public class TeacherService {
         return teacherRepository.save(teacher);
     }
 }
-//@Service
-//        // indic jpa ca aceasta este o clasa de service in care voi crea
-//// logica de business a aplicatiei
-//public class CategoryService {
-//    private CategoryRepository categoryRepository;
-//    //injectez been - ul de productCategoryRepository prin constructor
-//    //si ma folosesc de adnotarea @autowired
-//
-//    @Autowired
-//    public CategoryService(CategoryRepository categoryRepository) {
-//        this.categoryRepository = categoryRepository;
-//    }
