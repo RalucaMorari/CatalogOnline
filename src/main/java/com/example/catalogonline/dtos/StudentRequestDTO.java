@@ -1,2 +1,4 @@
-package com.example.catalogonline.dtos;public class StudentRequestDTO {
+package com.example.catalogonline.dtos;
+
+public class StudentRequestDTO {
 }

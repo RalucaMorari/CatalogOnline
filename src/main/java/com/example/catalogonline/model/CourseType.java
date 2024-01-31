@@ -1,2 +1,28 @@
-package com.example.catalogonline.model;public interface CourseType {
+package com.example.catalogonline.model;
+
+public enum CourseType {
+
+    LIMBA_SI_lITERATURA_ROMANA,
+    lIMBA_FRANCEZA,
+    LIMBA_ENGLEZA,
+    MATEMATICA,
+    FIZICA,
+    EDUCATIE_FIZICA,
+    BIOLOGIE,
+    CHIMIE,
+    ELEMENTE_DE_LIMBA_LATINA_SI_DE_CULTURA_ROMANICA,
+    EDUCATIE_MUZICALA,
+    EDUCATIE_PLASTICA,
+    EDUCATIE_SOCIALA,
+    EDUCATIE_TEHNOLOGICA,
+    GEOGRAFIE,
+    ISTORIE,
+    RELIGIE,
+    NEW_WINGS,
+    EDUCATIE_PENTRU_SANATATE,
+    LECTURA_CA_ABILITATE_DE_VIATA,
+    PURTARE
+
 }
+
+

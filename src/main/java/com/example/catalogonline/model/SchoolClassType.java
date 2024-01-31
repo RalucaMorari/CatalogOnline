@@ -1,6 +1,6 @@
 package com.example.catalogonline.model;
 
-public enum ClassType {
+public enum SchoolClassType {
     CPA,
     CPB,
     IA,
@@ -19,5 +19,4 @@ public enum ClassType {
     VIIB,
     VIIIA,
     VIIIB,
-
 }
