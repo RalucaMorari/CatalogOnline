@@ -3,6 +3,7 @@ package com.example.catalogonline.model;
 public class Imput {
 }
 /* 1. profesorul
+adauga disciplinele pe care le preda
 trece o notă intr-o data anume;
 alege nota dintr-o lista
 alege data din calendar
@@ -25,6 +26,8 @@ vede graficul notelor elevilor
 
 4. adminul
 adauga profesori si/sau elevi
+adauga disciplinele profesorilor ??
+adauga rolurile profesorilor
 vede toate notele si absentele elevilor
 vede graficul notelor elevilor
 vede activitatea tuturor profesorilor
@@ -34,4 +37,7 @@ le trimite profesorilor cu activitatea lor si dirigintilor - cu notele si absent
 
 
 !!! notele, absentele sau evaluarile se trimit pe e-mail-ul parintilor si/sau prin mesaj pe telefon
+
+
+??? elevii au numere matricole
  */

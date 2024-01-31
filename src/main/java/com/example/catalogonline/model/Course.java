@@ -42,14 +42,25 @@ public class Course {
     @JsonManagedReference("teacher-course")
     private List<Teacher> teachers;
 
+    @OneToMany(mappedBy = "course", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @JsonManagedReference("course-grade")
+    private List<Grade> grades;
+
+    @OneToMany(mappedBy = "course", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @JsonManagedReference("course-absence")
+    private List<Absence> absences;
+
     public Course() {
     }
 
-    public Course(Long id, CourseType courseType, List<SchoolClass> schoolClasses, List<Teacher> teachers) {
+    public Course(Long id, CourseType courseType,
+                  List<SchoolClass> schoolClasses, List<Teacher> teachers, List<Absence> absences, List<Grade> grades) {
         this.id = id;
         this.courseType = courseType;
         this.schoolClasses = schoolClasses;
         this.teachers = teachers;
+        this.absences = absences;
+        this.grades = grades;
     }
 
     public Long getId() {
@@ -82,5 +93,21 @@ public class Course {
 
     public void setTeachers(List<Teacher> teachers) {
         this.teachers = teachers;
+    }
+
+    public List<Grade> getGrades() {
+        return grades;
+    }
+
+    public void setGrades(List<Grade> grades) {
+        this.grades = grades;
+    }
+
+    public List<Absence> getAbsences() {
+        return absences;
+    }
+
+    public void setAbsences(List<Absence> absences) {
+        this.absences = absences;
     }
 }

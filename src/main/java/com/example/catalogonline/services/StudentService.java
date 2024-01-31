@@ -10,16 +10,17 @@ import org.springframework.stereotype.Service;
 public class StudentService {
 
     private StudentRepository studentRepository;
-@Autowired
+
+    @Autowired
     public StudentService(StudentRepository studentRepository) {
         this.studentRepository = studentRepository;
     }
 
-    public Student addStudent(StudentResponseDTO studentResponseDTO){
-    Student student= new Student();
-    student.setFirstName(studentResponseDTO.getFirstName());
-    student.setLastName(studentResponseDTO.getLastName());
-    return studentRepository.save(student);
+    public Student addStudent(StudentResponseDTO studentResponseDTO) {
+        Student student = new Student();
+        student.setFirstName(studentResponseDTO.getFirstName());
+        student.setLastName(studentResponseDTO.getLastName());
+        return studentRepository.save(student);
     }
 
 }

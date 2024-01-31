@@ -1,9 +1,9 @@
 package com.example.catalogonline.repositories;
 
-import com.example.catalogonline.model.Teacher;
+import com.example.catalogonline.model.Course;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface TeacherRepository extends JpaRepository<Teacher, Long> {
+public interface CourseRepository extends JpaRepository<Course, Long> {
 }

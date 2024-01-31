@@ -31,14 +31,20 @@ public class Absence {
     @JsonBackReference("absence-teacher")
     private Teacher teacher;
 
+    @ManyToOne
+    @JoinColumn(name = "course_id")
+    @JsonBackReference("course-absence")
+    private Course course;
+
     public Absence() {
     }
 
-    public Absence(Long id, LocalDate localDate, Student student, Teacher teacher) {
+    public Absence(Long id, LocalDate localDate, Student student, Teacher teacher, Course course) {
         this.id = id;
         this.localDate = localDate;
         this.student = student;
         this.teacher = teacher;
+        this.course = course;
     }
 
     public Long getId() {
@@ -71,5 +77,13 @@ public class Absence {
 
     public void setTeacher(Teacher teacher) {
         this.teacher = teacher;
+    }
+
+    public Course getCourse() {
+        return course;
+    }
+
+    public void setCourse(Course course) {
+        this.course = course;
     }
 }

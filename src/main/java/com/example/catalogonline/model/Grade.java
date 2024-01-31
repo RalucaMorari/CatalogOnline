@@ -33,15 +33,21 @@ public class Grade {
     @JsonBackReference("grade-teacher")
     private Teacher teacher;
 
+    @ManyToOne
+    @JoinColumn(name = "course_id")
+    @JsonBackReference("course-grade")
+    private Course course;
+
     public Grade() {
     }
 
-    public Grade(Long id, GradeTye gradeTye, LocalDate localDate, Student student, Teacher teacher) {
+    public Grade(Long id, GradeTye gradeTye, LocalDate localDate, Student student, Teacher teacher, Course course) {
         this.id = id;
         this.gradeTye = gradeTye;
         this.localDate = localDate;
         this.student = student;
         this.teacher = teacher;
+        this.course = course;
     }
 
     public Long getId() {
@@ -82,5 +88,13 @@ public class Grade {
 
     public void setTeacher(Teacher teacher) {
         this.teacher = teacher;
+    }
+
+    public Course getCourse() {
+        return course;
+    }
+
+    public void setCourse(Course course) {
+        this.course = course;
     }
 }
